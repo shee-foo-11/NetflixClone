@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getGenres } from "../store";
 import { fetchMovies } from "../store";
+import Slider from "../components/Slider";
 
 export default function Netflix(){
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,6 +47,7 @@ export default function Netflix(){
         </div>
       </div>
     </div>
+    <Slider movies={movies}/>
   </Container>
   );
 }
